@@ -63,9 +63,9 @@ help:
 
 # flags
 INCLUDE_CFLAGS	= -I./ -I./include/
-CFLAGS		+= $(INCLUDE_CFLAGS) -g -O2 -Wall -fPIC
-CPPFLAGS	+= $(INCLUDE_CFLAGS) -g -O2 -Wall -fPIC
-LDFLAGS		+= @LIBS@
+CFLAGS		+= @CFLAGS@ $(INCLUDE_CFLAGS) -g -O2 -Wall -fPIC
+CPPFLAGS	+= @CFLAGS@ $(INCLUDE_CFLAGS) -g -O2 -Wall -fPIC
+LDFLAGS		+= @LDFLAGS@ @LIBS@
 ARFLAGS		= r
 
 # 
